@@ -1,0 +1,26 @@
+git   init初始化git仓库 
+git   add   文件名    可以使用多次 添加多个文件
+git commit -m "备注信息给别人看的"   将提交的文件提交
+git log  查询每次修改的日志   日志信息 由时间近到时间远
+git reset   --hard HEAD~数字?    还原上第?个版本
+ git reflog     Git提供了一个命令git reflog用来记录你的每一次命令：
+ 1.如果你用的rm删除文件，那就相当于只删除了工作区的文件，如果想要恢复，直接用git checkout -- <file>就可以 2.如果你用的是git rm删除文件，那就相当于不仅删除了文件，而且还添加到了暂存区，需要先git reset HEAD <file>，然后再git checkout -- <file> 3.如果你想彻底把版本库的删除掉，先git rm，再git commit 就ok了
+git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
+$ git remote add origin git@github.com:michaelliao/learngit.git   将远程仓库和本地仓库进行关联
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+git push origin master 把本地master分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！ 
+Git鼓励大量使用分支：
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+  
+ 
